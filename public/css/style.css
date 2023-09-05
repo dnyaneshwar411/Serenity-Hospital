@@ -1,0 +1,548 @@
+:root {
+    --color-bg: #EEEEEE;
+    --color-primary: #000;
+    --color-secondary: #F11A7B;
+    --color-accent: #AEC3AE;
+    --color-highlighter: #CAEDFF;
+    --inline-width: 1200px;
+    --margin-block: 8rem;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 250ms;
+}
+
+body {
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    margin-block: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+.btn-primary {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-bg);
+    background-color: var(--color-secondary);
+    padding: 10px 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+}
+
+i {
+    cursor: pointer;
+}
+
+p {
+    color: var(--color-accent);
+    line-height: 1.7;
+}
+
+hr {
+    margin-block: 2rem;
+    opacity: 0.1;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    min-height: 12rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 100%;
+}
+
+.highlighter {
+    color: var(--color-secondary);
+}
+
+.margin_block {
+    margin-block: var(--margin-block);
+}
+
+.main_container {
+    width: var(--inline-width);
+    margin-inline: auto;
+}
+
+.alert {
+    text-align: center;
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+    width: 30rem;
+    padding: 1rem 10px;
+    margin-inline: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid var(--color-bg);
+    border-radius: 10px;
+    z-index: 105;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+.block_img {
+    width: 80%;
+    display: block;
+    margin-inline: auto;
+    aspect-ratio: 18 / 9;
+    object-fit: cover;
+}
+
+#contact-page .container p,
+#privacy-page .container p,
+#contact-page .container ol li,
+#about p {
+    margin-top: 1.5rem;
+    margin-inline: auto;
+    width: 80%;
+    letter-spacing: 1.5px;
+    color: var(--color-primary);
+}
+
+#contact-page h2,
+#privacy-page h2,
+#contact-page h2,
+#about h2 {
+    margin-block: 40px 20px;
+}
+
+#privacy-page .container ol li {
+    padding-top: 10px;
+}
+
+#contact-page .container p,
+#about p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+}
+
+#contact .flex {
+    gap: 2rem;
+}
+
+#contact .flex>div {
+    width: 50%;
+}
+
+.branding {
+    margin-right: 2rem;
+    align-items: center;
+    gap: 10px;
+}
+
+.branding img {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+nav .main_container {
+    align-items: center;
+    padding-block: 1rem;
+}
+
+ul {
+    list-style: none;
+    gap: 2rem;
+    margin-inline: auto 2rem;
+}
+
+nav .fa-bars {
+    font-size: 1.4rem;
+    margin-inline: auto 1rem;
+    display: none;
+}
+
+.sideBar_toggle {
+    left: 0 !important;
+}
+
+#hero {
+    max-height: 100vh;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#hero .highlighter {
+    font-size: 1.5em;
+}
+
+#hero p {
+    width: 60ch;
+    margin-block: 2rem;
+}
+
+#hero video {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#hero .main_container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hero img {
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: block;
+}
+
+.carousel_container {
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 5;
+}
+
+#hero .wrapper {
+    color: var(--color-bg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.carousel_item {
+    scroll-snap-align: start;
+    width: 100%;
+    display: inline-block;
+}
+
+#facilities .flex {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#facilities .card {
+    background-color: var(--color-highlighter);
+    width: calc(calc(100% - 4rem) / 3);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px var(--color-accent);
+}
+
+#facilities .card p {
+    color: var(--color-primary);
+}
+
+#facilities .flex .card>div {
+    padding: 0 15px 15px;
+}
+
+#facilities img {
+    width: 100%;
+    aspect-ratio: 1 / 0.5;
+    object-fit: cover;
+}
+
+#poster .container {
+    padding-block: 2rem;
+    text-align: center;
+    max-width: 50%;
+    margin-left: auto;
+    background-image: linear-gradient(to left, #000, 85%, rgba(0, 0, 0, 0.05));
+    color: var(--color-bg);
+}
+
+#poster p,
+button {
+    color: var(--color-bg);
+}
+
+#poster p {
+    margin-block: 1rem;
+}
+
+#diagnostics h3 {
+    margin-bottom: 1rem;
+}
+
+#diagnostics a {
+    text-decoration: underline;
+}
+
+#diagnostics>.flex {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#diagnostics .flex {
+    gap: 2rem;
+}
+
+#diagnostics .flex .card {
+    width: calc(calc(100% - 4rem) / 3);
+}
+
+#diagnostics .flex img {
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--color-primary);
+}
+
+footer {
+    padding-block: 3rem 1.5rem;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    min-height: 10rem;
+}
+
+footer p {
+    font-weight: 200;
+}
+
+footer i {
+    margin-right: 10px;
+}
+
+footer .flex {
+    gap: 1rem;
+}
+
+footer .flex>div {
+    width: calc(25%);
+}
+
+footer .flex>div:first-child {
+    width: calc(50%);
+}
+
+footer li {
+    color: var(--color-accent);
+    margin-top: 0.6rem;
+}
+
+footer li:hover,
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+/* Appointments */
+#appointment {
+    padding-block: 5rem;
+}
+
+#appointment .wrapper {
+    width: 30rem;
+    padding: 2rem 16px;
+    margin-inline: auto;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 0 20px 1px var(--color-primary);
+}
+
+/* Authentication Card */
+#appointment,
+#authentication_card {
+    background-image: url('https://www.anao.gov.au/sites/default/files/styles/anao_report/public/anao_report/image/anao-administration-the-community-health-and-hospitals-program.jpg?itok=DUDxOEQY');
+    background-color: var(--color-highlighter);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#appointment::before,
+#authentication_card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    opacity: 0.65;
+    top: 0;
+    left: 0;
+}
+
+#authentication_box {
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 0 20px 1px var(--color-primary);
+}
+
+#contact {
+    color: var(--color-text-light);
+    background-color: var(--color-accent);
+    padding-block: 3rem;
+}
+
+@media (max-width:750px) {
+    #hero h2 {
+        font-size: 1.4rem;
+    }
+
+    #hero button {
+        margin-top: 1rem;
+    }
+
+    #hero p {
+        display: none;
+    }
+
+    #diagnostics .flex .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 750px) and (max-width:950px) {
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 950px) {
+    nav ul {
+        padding: 0;
+        margin: 0;
+        font-size: 2rem;
+        background-color: var(--color-secondary);
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: -101vw;
+        transition: all 250ms;
+        z-index: 105;
+    }
+
+    nav .fa-bars {
+        display: block;
+        z-index: 100;
+    }
+}
+
+@media (min-width: 750px) and (max-width:1050px) {
+
+    #diagnostics .flex .card {
+        width: calc(calc(100% - 2rem) / 2);
+    }
+
+}
+
+@media (max-width:1050px) {
+
+    #facilities .flex,
+    #contact .flex,
+    footer .flex {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #facilities .flex .card,
+    #contact .flex>div,
+    footer .flex>div {
+        width: 100%;
+    }
+
+    #poster .container {
+        color: var(--color-bg);
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        background-image: none;
+    }
+}
+
+@media (max-width:1250px) {
+    :root {
+        --inline-width: 90%;
+    }
+}
