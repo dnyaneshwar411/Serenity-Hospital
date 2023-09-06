@@ -30,7 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/admin/style.css') }}" rel="stylesheet">
-
+    @vite('public/css/admin/style.css', 'public/css/admin/bootstrap.min.css')
     @yield('head')
 </head>
 

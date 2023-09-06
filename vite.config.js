@@ -7,6 +7,10 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'public/css/style.css',
+                'public/css/testimonials.css',
+                'public/css/admin/style.css',
+                'public/css/admin/bootstrap.min.css',
             ],
             refresh: [
                 ...refreshPaths,

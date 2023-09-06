@@ -4,6 +4,7 @@ use App\Http\Controllers\admin;
 use App\Http\Controllers\webPages;
 use App\Http\Middleware\admin as MiddlewareAdmin;
 use App\Http\Middleware\appointment;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('run-migration', function () {
+    Artisan::call('optimize:clear');
+    Artisan::call('migrate:fresh --seed');
+
+    return "Migrations executed successfully";
+});
 
 Route::get('/', [webPages::class, 'home']);
 Route::get('/about', [webPages::class, 'about']);
