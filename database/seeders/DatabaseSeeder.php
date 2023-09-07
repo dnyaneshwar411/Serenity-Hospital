@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            // users::class
+            users::class
         ]);
         $faker = faker::create();
 
@@ -31,5 +31,23 @@ class DatabaseSeeder extends Seeder
                 'user_type' => 'doctor',
             ]);
         }
+
+        for ($i = 0; $i < 50; $i++) {
+            \App\Models\User::factory()->create([
+                'name' => $faker->name,
+                'email' =>  $faker->email,
+                'phone_no' =>  '9067183889',
+                'password' =>  '$2y$10$GBJVivJ0JOCsJGZW.DAogeMOxlSo43H/DnU2/XFvC5qJkLZxr45Ya', //12345678
+                'user_type' => 'doctor',
+            ]);
+        }
+
+        \App\Models\User::factory()->create([
+            'name' => 'Dnyaneshwar Kawade',
+            'email' =>  'dnyaneshwarpk20@gmail.com',
+            'phone_no' =>  '9067183889',
+            'password' =>  '$2y$10$GBJVivJ0JOCsJGZW.DAogeMOxlSo43H/DnU2/XFvC5qJkLZxr45Ya', //12345678
+            'user_type' => 'admin',
+        ]);
     }
 }

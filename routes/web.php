@@ -18,13 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('run-migration', function () {
-    Artisan::call('optimize:clear');
-    Artisan::call('migrate:fresh --seed');
-
-    return "Migrations executed successfully";
-});
-
 Route::get('/', [webPages::class, 'home']);
 Route::get('/about', [webPages::class, 'about']);
 Route::get('/contact', [webPages::class, 'contact']);
